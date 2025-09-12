@@ -13,21 +13,18 @@ var ypos = 0;
 window.addEventListener(
   "keydown",
   (event) => {
-    switch (event.key) {
-      case "ArrowDown":
-        ypos += char_velocity;
-        break;
-      case "ArrowUp":
-        ypos -= char_velocity;
-        break;
-      case "ArrowLeft":
-        xpos -= char_velocity;
-        break;
-      case "ArrowRight":
-        xpos += char_velocity;
-        break;
-      default:
-        return; // Quit when this doesn't handle the key event.
+    if (event.key == "ArrowDown") {
+      ypos += char_velocity;
+    }
+    if (event.key == "ArrowUp") {
+      ypos -= char_velocity;
+    }
+    if (event.key == "ArrowLeft") {
+      xpos -= char_velocity;
+    }
+    if (event.key == "ArrowRight") {
+      xpos += char_velocity;
+    }
     }
   },
   true,
