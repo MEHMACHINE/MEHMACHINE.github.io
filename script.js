@@ -15,10 +15,10 @@ window.addEventListener(
   (event) => {
     switch (event.key) {
       case "ArrowDown":
-        ypos -= char_velocity;
+        ypos += char_velocity;
         break;
       case "ArrowUp":
-        ypos += char_velocity;
+        ypos -= char_velocity;
         break;
       case "ArrowLeft":
         xpos -= char_velocity;
