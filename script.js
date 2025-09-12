@@ -54,8 +54,8 @@ function gameLoop() {
 
 function update() {
   // stuff
-  xpos += 5;
-  ypos += 5;
+  //xpos += 5;
+  //ypos += 5;
 }
 
 function draw () {
