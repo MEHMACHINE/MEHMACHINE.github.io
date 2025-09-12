@@ -12,7 +12,7 @@ var ypos = 0;
 function gameLoop() {
   // Words
   ctx.fillStyle = "black";
-  ctx.fillRect(0, 0, 100, 100);
+  ctx.fillRect(-width/2, -height/2, width, height);
 
   update();
   draw();
@@ -23,6 +23,7 @@ function gameLoop() {
 function update() {
   // stuff
   xpos += 5;
+  ypos += 5;
 }
 
 function draw () {
