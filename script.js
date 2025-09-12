@@ -27,7 +27,7 @@ function update() {
 }
 
 function draw () {
-  ctx.fillStyle = "rgb(200 200 200 / 25%)";
+  ctx.fillStyle = "rgb(0 255 255 / 25%)";
   ctx.fillRect(xpos, ypos, xpos + 50, ypos + 50);
   // Draw
 }
