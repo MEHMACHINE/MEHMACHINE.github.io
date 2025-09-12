@@ -4,6 +4,7 @@ const width = canvas.width = window.innerWidth;
 const height = canvas.height = window.innerHeight;
 const ctx = canvas.getContext("2d");
 
+const char_velocity = 2;
 ctx.translate(width/2, height/2); // Move the origin
 
 var xpos = 0;
@@ -12,31 +13,22 @@ var ypos = 0;
 window.addEventListener(
   "keydown",
   (event) => {
-    if (event.defaultPrevented) {
-      return; // Do nothing if the event was already processed
-    }
-
     switch (event.key) {
       case "ArrowDown":
-        // Do something for "down arrow" key press.
+        ypos -= char_velocity;
         break;
       case "ArrowUp":
-        // Do something for "up arrow" key press.
+        ypos += char_velocity;
         break;
       case "ArrowLeft":
-        // Do something for "left arrow" key press.
-        xpos--;
+        xpos -= char_velocity;
         break;
       case "ArrowRight":
-        // Do something for "right arrow" key press.
-        xpos++;
+        xpos += char_velocity;
         break;
       default:
         return; // Quit when this doesn't handle the key event.
     }
-
-    // Cancel the default action to avoid it being handled twice
-    event.preventDefault();
   },
   true,
 );
